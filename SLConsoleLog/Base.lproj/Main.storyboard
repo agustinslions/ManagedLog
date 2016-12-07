@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iRp-Nd-vpe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgL-6d-puj">
+                                <rect key="frame" x="119" y="95" width="137" height="30"/>
+                                <state key="normal" title="Log first &quot;TrackLog&quot;"/>
+                                <connections>
+                                    <action selector="firstLogAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0r4-SX-fho"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-Wv-yFL">
+                                <rect key="frame" x="114" y="171" width="147" height="30"/>
+                                <state key="normal" title="Log thirth &quot;TrackLog&quot;"/>
+                                <connections>
+                                    <action selector="thirthLogAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="872-tF-G5h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otu-gp-zm6">
+                                <rect key="frame" x="107.5" y="133" width="160" height="30"/>
+                                <state key="normal" title="Log second &quot;TrackLog&quot;"/>
+                                <connections>
+                                    <action selector="secondLogAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R7W-2P-auV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-9A-BpL">
+                                <rect key="frame" x="111.5" y="209" width="152" height="30"/>
+                                <state key="normal" title="Log fourth &quot;TrackLog&quot;"/>
+                                <connections>
+                                    <action selector="fourthLogAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdY-1w-xrx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af0-XL-Zrg">
+                                <rect key="frame" x="155.5" y="617" width="64" height="30"/>
+                                <state key="normal" title="See Logs"/>
+                                <connections>
+                                    <action selector="seeLogsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sxy-ne-bEN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCD-64-CDT">
+                                <rect key="frame" x="113" y="258" width="150" height="30"/>
+                                <state key="normal" title="Log first &quot;TrackLog 2&quot;"/>
+                                <connections>
+                                    <action selector="first2LogAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcm-gq-mWn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGe-IL-QY3">
+                                <rect key="frame" x="101" y="296" width="173" height="30"/>
+                                <state key="normal" title="Log second &quot;TrackLog 2&quot;"/>
+                                <connections>
+                                    <action selector="second2LogAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsQ-Jk-zD2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ty-nX-7EX">
+                                <rect key="frame" x="108" y="334" width="160" height="30"/>
+                                <state key="normal" title="Log thirth &quot;TrackLog 2&quot;"/>
+                                <connections>
+                                    <action selector="thirth2LogAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="plZ-1G-O9c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IgL-6d-puj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="29X-lv-J8f"/>
+                            <constraint firstItem="otu-gp-zm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41l-8W-wFP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="af0-XL-Zrg" secondAttribute="bottom" constant="20" id="BCL-an-4Ww"/>
+                            <constraint firstItem="TJd-Wv-yFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FVU-xN-RPU"/>
+                            <constraint firstItem="oGe-IL-QY3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hcc-Qn-XDv"/>
+                            <constraint firstItem="JCD-64-CDT" firstAttribute="top" secondItem="kaO-9A-BpL" secondAttribute="bottom" constant="19" id="Mea-1I-J5p"/>
+                            <constraint firstItem="kaO-9A-BpL" firstAttribute="top" secondItem="TJd-Wv-yFL" secondAttribute="bottom" constant="8" id="PTn-uO-LRr"/>
+                            <constraint firstItem="3ty-nX-7EX" firstAttribute="top" secondItem="oGe-IL-QY3" secondAttribute="bottom" constant="8" id="RVz-IO-j0X"/>
+                            <constraint firstItem="kaO-9A-BpL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIW-GM-hie"/>
+                            <constraint firstItem="oGe-IL-QY3" firstAttribute="top" secondItem="JCD-64-CDT" secondAttribute="bottom" constant="8" id="gih-P1-kdx"/>
+                            <constraint firstItem="otu-gp-zm6" firstAttribute="top" secondItem="IgL-6d-puj" secondAttribute="bottom" constant="8" id="kiR-z5-3Ur"/>
+                            <constraint firstItem="TJd-Wv-yFL" firstAttribute="top" secondItem="otu-gp-zm6" secondAttribute="bottom" constant="8" id="o16-iQ-Hpn"/>
+                            <constraint firstItem="JCD-64-CDT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhP-1t-hiB"/>
+                            <constraint firstItem="af0-XL-Zrg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xCr-Mb-emZ"/>
+                            <constraint firstItem="3ty-nX-7EX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xc7-32-X5x"/>
+                            <constraint firstItem="IgL-6d-puj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yMZ-pb-ii7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OBp-LQ-wKM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tkN-l3-qTZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iRp-Nd-vpe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gtc-h4-K9G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rGn-gZ-gYW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVq-WM-hXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="-560.86956521739137"/>
+        </scene>
+    </scenes>
+</document>
