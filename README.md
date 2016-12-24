@@ -9,11 +9,11 @@ You can separate all logs by name of categories or see all at the same time.
 This projects is easy to use. Only you need to add in your project the folder “ConsoleLog” with all files.
 
 Files:
-	* SLConsoleLogController
-	* SLConsoleLogManager
-	* SLFileSystemLogsTools
-	* SLConsoleTypeViewController
-	* SLLogsViewController
+- SLConsoleLogController.
+- SLConsoleLogManager.
+- SLFileSystemLogsTools
+- SLConsoleTypeViewController
+- SLLogsViewController
 
 For create a log you can use this macro, SLLogWithType(log, type). 
 In the first variable you put your log and the seconds is the name of the category of the logs.
