@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.author       = { "agustinslions" => "agustinslions@gmail.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/agustinslions/ManagedLog.git", :tag => "1.0.0" }
-  s.source_files  = "SLConsoleLog/ConsoleLogs/*.{h,m,xib}"
+  s.source_files = "SLConsoleLog/ConsoleLogs/*.{h,m}"
+  s.resources = "SLConsoleLog/ConsoleLogs/*.xib'
   s.requires_arc = true
 end
