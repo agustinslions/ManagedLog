@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary      = "See all logs in app on real time."
   s.description  = "A great lib for show and manage all logs in the app in real time for QA process."
   s.homepage     = "https://github.com/agustinslions/ManagedLog.git"
-  s.license      = "MIT"
+  s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.author       = { "agustinslions" => "agustinslions@gmail.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/agustinslions/ManagedLog.git", :tag => "1.0.0" }
