@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SLConsoleLog"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "See all logs in app on real time."
   s.description  = "A great lib for show and manage all logs in the app in real time for QA process."
   s.homepage     = "https://github.com/agustinslions/ManagedLog.git"
