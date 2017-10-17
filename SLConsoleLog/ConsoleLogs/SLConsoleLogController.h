@@ -14,6 +14,8 @@
 
 @interface SLConsoleLogController : NSObject
 
+@property (nonatomic, assign) BOOL stopRecord;
+
 @property (nonatomic, assign) BOOL cleanAllPerSession;
 
 + (SLConsoleLogController *)sharedInstance;
