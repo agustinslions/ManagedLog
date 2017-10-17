@@ -29,7 +29,7 @@
     self = [super init];
     
     if (self) {
-    
+        self.stopRecord = NO;
         self.cleanAllPerSession = [[NSUserDefaults standardUserDefaults] boolForKey:@"SLConsoleLogClean"];
     }
     
@@ -54,7 +54,7 @@
 
 - (void)addLog:(NSString *)log {
     @try {
-        if (self.stopRecord) {
+        if (!self.stopRecord) {
             [self addLogOnGeneralFile:log];
         }
     } @catch (NSException *exception) {
@@ -64,7 +64,7 @@
 
 - (void)addLog:(NSString *)log withType:(NSString *)type {
     @try {
-        if (self.stopRecord) {
+        if (!self.stopRecord) {
             [self addLogOnGeneralFile:log];
             [self addLogOnFileWithType:type withLog:log];
         }
