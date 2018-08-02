@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SLConsoleLogController.h"
-#import "SLConsoleTypesViewController.h"
+#import "SLConsoleLog.h"
 
 @interface ViewController ()
 

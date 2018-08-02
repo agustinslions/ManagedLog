@@ -47,6 +47,7 @@
 		548CBA031DF74F7700C5E52F /* SLLogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLogsViewController.h; sourceTree = "<group>"; };
 		548CBA041DF74F7700C5E52F /* SLLogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLogsViewController.m; sourceTree = "<group>"; };
 		548CBA051DF74F7700C5E52F /* SLLogsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLLogsViewController.xib; sourceTree = "<group>"; };
+		54DC178121133AA10067253D /* SLConsoleLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLConsoleLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 				548CBA031DF74F7700C5E52F /* SLLogsViewController.h */,
 				548CBA041DF74F7700C5E52F /* SLLogsViewController.m */,
 				548CBA051DF74F7700C5E52F /* SLLogsViewController.xib */,
+				54DC178121133AA10067253D /* SLConsoleLog.h */,
 			);
 			path = ConsoleLogs;
 			sourceTree = "<group>";
