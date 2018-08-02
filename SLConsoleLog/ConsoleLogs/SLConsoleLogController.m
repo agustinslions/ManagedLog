@@ -41,13 +41,18 @@
 }
 
 - (void)setCleanAllPerSession:(BOOL)cleanAllPerSession {
-    _cleanAllPerSession = cleanAllPerSession;
-    
-    [[NSUserDefaults standardUserDefaults] setBool:_cleanAllPerSession forKey:@"SLConsoleLogClean"];
-    
-    if (_cleanAllPerSession) {
-        [self cleanAllLogs];
+    @try {
+        _cleanAllPerSession = cleanAllPerSession;
+        
+        [[NSUserDefaults standardUserDefaults] setBool:_cleanAllPerSession forKey:@"SLConsoleLogClean"];
+        
+        if (_cleanAllPerSession) {
+            [self cleanAllLogs];
+        }
+    } @catch (NSException *exception) {
+        
     }
+
 }
 
 #pragma mark - Public Methods
