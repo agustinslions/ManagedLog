@@ -27,6 +27,7 @@
         
     self.consoleFiles = [SLConsoleLogManager getFilesLogsTypes];
     
+    [self setupNavigationBar];
     [self.tableView reloadData];
 }
 
@@ -39,6 +40,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupNavigationBar {
+    UIBarButtonItem *closeBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                    target:self
+                                                                                    action:@selector(closeViewController)];
+    self.navigationItem.leftBarButtonItem = closeBarButton;
+}
+
+- (void)closeViewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -64,7 +76,9 @@
     
     NSLog(@"%@", [self.consoleFiles objectAtIndex:indexPath.row]);
     
-    SLLogsViewController *logsViewController = [[SLLogsViewController alloc] initWithNibName:@"SLLogsViewController" bundle:nil];
+    NSBundle *bundle = [NSBundle bundleForClass:[SLLogsViewController class]];
+    
+    SLLogsViewController *logsViewController = [[SLLogsViewController alloc] initWithNibName:@"SLLogsViewController" bundle:bundle];
 
     logsViewController.filePathLogs = [SLFileSystemLogsTools getNameOfFileFromPath:[self.consoleFiles objectAtIndex:indexPath.row]];
     

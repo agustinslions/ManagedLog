@@ -21,6 +21,7 @@
 		548CBA0A1DF74F7700C5E52F /* SLFileSystemLogsTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 548CBA021DF74F7700C5E52F /* SLFileSystemLogsTools.m */; };
 		548CBA0B1DF74F7700C5E52F /* SLLogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548CBA041DF74F7700C5E52F /* SLLogsViewController.m */; };
 		548CBA0C1DF74F7700C5E52F /* SLLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548CBA051DF74F7700C5E52F /* SLLogsViewController.xib */; };
+		54DC1787211366F20067253D /* SLViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DC1786211366F20067253D /* SLViewController+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		548CBA041DF74F7700C5E52F /* SLLogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLogsViewController.m; sourceTree = "<group>"; };
 		548CBA051DF74F7700C5E52F /* SLLogsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLLogsViewController.xib; sourceTree = "<group>"; };
 		54DC178121133AA10067253D /* SLConsoleLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLConsoleLog.h; sourceTree = "<group>"; };
+		54DC1785211366F20067253D /* SLViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLViewController+Extension.h"; sourceTree = "<group>"; };
+		54DC1786211366F20067253D /* SLViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SLViewController+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				548CBA041DF74F7700C5E52F /* SLLogsViewController.m */,
 				548CBA051DF74F7700C5E52F /* SLLogsViewController.xib */,
 				54DC178121133AA10067253D /* SLConsoleLog.h */,
+				54DC1785211366F20067253D /* SLViewController+Extension.h */,
+				54DC1786211366F20067253D /* SLViewController+Extension.m */,
 			);
 			path = ConsoleLogs;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				548CB9E71DF74F2800C5E52F /* ViewController.m in Sources */,
+				54DC1787211366F20067253D /* SLViewController+Extension.m in Sources */,
 				548CBA061DF74F7700C5E52F /* SLConsoleLogController.m in Sources */,
 				548CBA0B1DF74F7700C5E52F /* SLLogsViewController.m in Sources */,
 				548CB9ED1DF74F2800C5E52F /* SLConsoleLog.xcdatamodeld in Sources */,

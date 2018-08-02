@@ -63,8 +63,7 @@
 
 - (IBAction)seeLogsAction:(id)sender
 {
-    SLConsoleTypesViewController *logsViewController = [[SLConsoleTypesViewController alloc] initWithNibName:@"SLConsoleTypesViewController" bundle:nil];
-    [self.navigationController pushViewController:logsViewController animated:YES];
+    [self showConsoleTypesViewController];
 }
 
 @end

@@ -9,3 +9,4 @@
 #import "SLConsoleLogController.h"
 #import "SLConsoleLogManager.h"
 #import "SLConsoleTypesViewController.h"
+#import "SLViewController+Extension.h"
