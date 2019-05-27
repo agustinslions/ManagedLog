@@ -71,8 +71,25 @@
     NSFileManager *fm = [NSFileManager defaultManager];
     NSString *directory = [self pathForConsoleLogDirectory];
     NSError *error = nil;
-    
-    return [NSMutableArray arrayWithArray: [fm contentsOfDirectoryAtPath:directory error:&error]] ;
+
+    NSArray *directoryContent = [fm contentsOfDirectoryAtURL:[[NSURL alloc] initWithString:directory]
+                                  includingPropertiesForKeys:@[NSURLContentModificationDateKey]
+                                                     options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                       error:&error];
+
+    NSArray *sortedContent = [directoryContent sortedArrayUsingComparator:
+                              ^(NSURL *file1, NSURL *file2)
+                              {
+                                  NSDate *file1Date;
+                                  [file1 getResourceValue:&file1Date forKey:NSURLContentModificationDateKey error:nil];
+
+                                  NSDate *file2Date;
+                                  [file2 getResourceValue:&file2Date forKey:NSURLContentModificationDateKey error:nil];
+
+                                  return [file2Date compare: file1Date];
+                              }];
+
+    return [NSMutableArray arrayWithArray: sortedContent] ;
 }
 
 + (NSString *)getNameOfFileFromPath:(NSString *)path

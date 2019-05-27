@@ -11,7 +11,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface SLLogsViewController () <MFMailComposeViewControllerDelegate, UIScrollViewDelegate>
+@interface SLLogsViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (nonatomic, weak) IBOutlet UIButton *button;
@@ -26,28 +26,21 @@
     // Do any additional setup after loading the view from its nib.
     self.textView.text = [SLConsoleLogManager getLogsForType:self.filePathLogs];
     [self checkIfBottomScroll];
-    UIBarButtonItem *barbutton = [[UIBarButtonItem alloc] initWithTitle:@"Send Logs" style:UIBarButtonItemStyleDone target:self action:@selector(sendLogsAction)];
+    UIBarButtonItem *barbutton = [[UIBarButtonItem alloc] initWithTitle:@"Send Logs"
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(sendLogsAction)];
     self.navigationItem.rightBarButtonItem = barbutton;
 }
 
 - (void)sendLogsAction
 {
-    if ([MFMailComposeViewController canSendMail]) {
-        
-        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-        mailViewController.mailComposeDelegate = self;
-        [mailViewController setSubject:@"Sending logs."];
-        [mailViewController setMessageBody:[SLConsoleLogManager getLogsForType:self.filePathLogs] isHTML:NO];
-        
-        [self presentViewController:mailViewController animated:NO completion:nil];
-    } else {
-        NSLog(@"This device not supporting send mails");
-    }
-}
-
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    NSString *title = @"Sending logs.";
+    NSString *message = [SLConsoleLogManager getLogsForType:self.filePathLogs];
+    NSArray *shareArray = @[title, message];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:shareArray
+                                                                             applicationActivities:nil];
+    [self.navigationController presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

@@ -47,10 +47,23 @@
                                                                                     target:self
                                                                                     action:@selector(closeViewController)];
     self.navigationItem.leftBarButtonItem = closeBarButton;
+
+    UIBarButtonItem *resetDataBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Reset Data"
+                                                                           style:UIBarButtonItemStyleDone
+                                                                          target:self
+                                                                          action:@selector(resetData)];
+    self.navigationItem.rightBarButtonItem = resetDataBarButton;
+
 }
 
 - (void)closeViewController {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)resetData {
+    [SLConsoleLogManager cleanAllLogs];
+    self.consoleFiles = [SLConsoleLogManager getFilesLogsTypes];
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
